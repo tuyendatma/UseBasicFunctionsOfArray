@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Từ điển</title>
+</head>
+<body>
+<input type="text" id="input">
+<button id="btn_click" >Translate</button>
+<p id="ketqua"></p>
+<script>
+
+let btn_click=document.getElementById("btn_click");
+
+btn_click.onclick =function(){
+    console.log("hello");
+    let english =["me","you","we","they","it","he","she"];
+    let vietnamese=["tôi","bạn","chúng ta","bọn họ/chúng nó","nó","anh ta","cô ta"];
+    let word= document.getElementById("input").value;
+
+     let nghiaTiengViet = "";
+     let k =english.indexOf(word);
+     if(k!== -1){
+         nghiaTiengViet=vietnamese[k];
+         word="";
+     }else {
+         nghiaTiengViet = 'từ bạn nhập không có trong từ điển';
+     }
+    document.getElementById("ketqua").innerHTML = nghiaTiengViet;
+}
+</script>
+</body>
+</html>
