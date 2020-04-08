@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Nối các phần tử trong mảng</title>
+
+</head>
+<body>
+<script>
+    let theColor = ["Red","Green","White","Black"];
+    let ketQua ="";
+    for(let i=0;i<theColor.length;i++){
+        ketQua+= theColor[i]+",";
+    }
+    document.write(ketQua);
+    document.write("<br/>");
+    document.write(theColor.toString());
+    document.write("<br/>");
+    document.write(theColor.join());
+    document.write("<br/>");
+    document.write(theColor.join('+'));
+
+</script>
+</body>
+</html>
